@@ -7,6 +7,12 @@ on:
     paths:
       - 'HabitBreaker/**'
       - '.github/workflows/habit-breaker-apk.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'HabitBreaker/**'
+      - '.github/workflows/habit-breaker-apk.yml'
   workflow_dispatch:
 
 jobs:
