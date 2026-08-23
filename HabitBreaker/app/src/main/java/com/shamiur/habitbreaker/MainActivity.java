@@ -2,7 +2,6 @@ package com.shamiur.habitbreaker;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -308,7 +307,7 @@ public class MainActivity extends Activity {
 
         if (!active) {
             countdownText.setText(formatDuration(duration));
-            statusText.setText("Ready when you are. Start the timer after your last cigarette.");
+            statusText.setText("Ready when you are. Start the timer when your smoke-free challenge begins.");
             challengeProgress.setProgress(0);
             startButton.setVisibility(View.VISIBLE);
             completeButton.setVisibility(View.GONE);
@@ -378,7 +377,6 @@ public class MainActivity extends Activity {
     private Button primaryButton(String label) {
         Button button = new Button(this);
         button.setText(label);
-        button.setTextAllCaps(false);
         button.setTextSize(15);
         button.setTextColor(Color.WHITE);
         button.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
@@ -392,7 +390,6 @@ public class MainActivity extends Activity {
     private Button secondaryButton(String label) {
         Button button = new Button(this);
         button.setText(label);
-        button.setTextAllCaps(false);
         button.setTextSize(14);
         button.setTextColor(Color.rgb(50, 62, 87));
         GradientDrawable bg = new GradientDrawable();
